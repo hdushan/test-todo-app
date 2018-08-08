@@ -40,7 +40,12 @@ todoRoutes.route('/add').post(function (req, res) {
       if (error) {
         res.status(400).send('Unable to create todo list');
       }
+      let d = Math.random();
+      if (d < 0.1) {
+          res.status(418).send('Coffee does not belong in a teapot....')
+      }else{
         res.status(200).json(todo);
+      }
     }
   );
 });
