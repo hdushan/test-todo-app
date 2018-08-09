@@ -1,3 +1,7 @@
+const webpack = require('webpack');
+
+const API_HOST = process.env.API_HOST || 'http://localhost:4000'
+
 module.exports = {
 
   entry: './public/src/main.js',
@@ -42,6 +46,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.API_HOST': JSON.stringify(API_HOST)
+    })
+  ],
   devServer: {
     port: 3000
   }

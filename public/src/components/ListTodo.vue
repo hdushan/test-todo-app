@@ -59,7 +59,7 @@
         methods: {
             fetchTodo() {
                 this.isLoading = true;
-                let uri = 'http://localhost:4000/api/all';
+                let uri = `${process.env.API_HOST}/api/all`;
                 axios.get(uri).then((response) => {
                     this.todos = response.data;
                     this.isLoading = false;
@@ -68,7 +68,7 @@
 
             updateTodo(todo) {
                 let id = todo._id;
-                let uri = 'http://localhost:4000/api/update/' + id;
+                let uri = `${process.env.API_HOST}/api/update/${id}`;
                 todo.editing = false;
                 axios.post(uri, todo).then((response) => {
                     console.log(response);
@@ -78,7 +78,7 @@
             },
 
             deleteTodo(id) {
-                let uri = 'http://localhost:4000/api/delete/' + id;
+                let uri = `${process.env.API_HOST}/api/delete/${id}`;
                 axios.get(uri);
                 this.fetchTodo();
             },

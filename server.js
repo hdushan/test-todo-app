@@ -17,7 +17,7 @@ var bodyParser = require('body-parser')
 var config = require('./app/Config')
 
 // Connect to database
-mongoose.connect(config.DB)
+mongoose.connect(`mongodb://${config.DB_HOST}/${config.DB_NAME}`)
 
 // Sends static files  from the public path directory
 app.use(express.static(path.join(__dirname, '/public')))
@@ -29,7 +29,7 @@ app.use(bodyParser.json())
 
 app.use(bodyParser.urlencoded({extended: true}))
 
-var port = config.APP_PORT || 4000
+var port = config.APP_PORT
 
 app.listen(port) // Listen on port defined in config file
 

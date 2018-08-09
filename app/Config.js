@@ -1,4 +1,5 @@
 module.exports = {
-  DB: 'mongodb://localhost:27017/todos',
-  APP_PORT: 4000
+  DB_HOST: process.env.DB_HOST || 'localhost:27017',
+  DB_NAME: process.env.DB_NAME || 'todos',
+  APP_PORT: parseInt(process.env.APP_PORT) || 4000
 }
