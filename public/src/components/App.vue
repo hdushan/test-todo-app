@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="container" class="container">
-      <div id="mainContent" class="row col-md-6 offset-md-4">
+      <div id="mainContent" class="col-md-6 offset-md-4">
         <create-todo></create-todo>
         <list-todo></list-todo>
       </div>
