@@ -1,4 +1,4 @@
-const path = require("path");
+ const path = require("path");
 const webpack = require("webpack");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
@@ -10,6 +10,9 @@ module.exports = {
     path: path.resolve(__dirname, "public/build"),
     filename: "bundle.js"
   },
+    performance: {
+        hints: false
+    },
   resolve: {
     alias: {
       vue$: "vue/dist/vue.esm.js"

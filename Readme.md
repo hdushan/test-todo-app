@@ -25,4 +25,9 @@ If you prefer to use Docker:
 docker-compose up --build
 ```
 
+To stop the docker images:
+```
+docker stop $(docker ps -q --filter ancestor="quality-tech-challenge_server" --filter ancestor="mongo")
+```
+
 Navigate to http://localhost:8080
