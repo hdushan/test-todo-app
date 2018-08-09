@@ -6,6 +6,7 @@ services:
       args:
         API_HOST: http://localhost:8080
     environment:
+      FRONTEND_HOST: http://localhost:8080
       APP_PORT: 4000
       DB_HOST: mongodb
       DB_NAME: todos
