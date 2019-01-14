@@ -3,7 +3,7 @@
 class BasePage {
     constructor() {
         this.shortDelay = 500;
-        this.longDelay = 10000;
+        this.longDelay = 30000;
     }
 
     goto() {
