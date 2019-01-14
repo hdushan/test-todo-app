@@ -31,7 +31,7 @@ brew install mongodb
 brew services start mongodb
 npm install
 npm run build
-npm start
+ENVIRONMENT=development npm run start # Note, the test setup will fail if ENVIRONMENT is not set to development
 ```
 
 #### Step 3: Start local selenium server
