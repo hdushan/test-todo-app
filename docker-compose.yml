@@ -10,7 +10,7 @@ services:
       - 8080:4000
     links:
       - mongodb
-      - selenium
+      - selenium # For demo only. Wouldnt normally make the app dependant on the selenium container
   mongodb:
     image: mongo
   selenium:
