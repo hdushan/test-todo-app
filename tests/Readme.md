@@ -43,4 +43,6 @@ On another terminal,
 
 #### Step 4: Start the tests
 
+On another terminal,
+
 `APP_URL=http://localhost:4000 SELENIUM_HOST=localhost npm run test`
