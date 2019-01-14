@@ -61,6 +61,18 @@ todoRoutes.route('/delete/:id').get(function (req, res, next) {
   });
 });
 
+// This route added to enable automated testing. Must not be included when running in production mode
+if (process.env.ENVIRONMENT == "development") {
+  todoRoutes.route('/reset').get(function (req, res, next) {
+    const id = req.params.id
+    Todo.deleteMany({}, function (err, todo) {
+      if (err) {
+        return next(new Error('Todo was not found'));
+      }
+        res.json('Test Instrumentation: Successfully removed all tasks');
+    });
+  });
+}
 
 todoRoutes.route('/update/:id').post(function (req, res, next) {
   const id = req.params.id;
