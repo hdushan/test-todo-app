@@ -17,7 +17,7 @@
         "method-override": "~3.0.0",
         "mongoose": "~5.2.7",
         "morgan": "^1.9.1",
-        "node-sass": "^4.9.2",
+        "node-sass": "^5.0.0",
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "vue-axios": "^2.1.3",
